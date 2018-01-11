@@ -1,0 +1,24 @@
+{
+  "name": "nodeman",
+  "version": "1.0.0",
+  "description": "Simple & Sweet fun game of hangman",
+  "main": "main.js",
+  "dependencies": {
+    "inquirer": "^5.0.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Highlyne/Nodeman.git"
+  },
+  "author": "Tamara Hall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Highlyne/Nodeman/issues"
+  },
+  "homepage": "https://github.com/Highlyne/Nodeman#readme"
+}
