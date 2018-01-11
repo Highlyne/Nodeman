@@ -91,10 +91,10 @@ var gameStart = function() {
           if (lettersInWord[i] === letterGuessed) 
           {
               spaceHolder[i] = letterGuessed;
-              console.log(letterGuessed + " is correct!"); 
+              console.log(letterGuessed + " you got!"); 
             
             } else {
-              console.log(letterGuessed + " is incorrect!");
+              console.log(letterGuessed + " try again!");
               }    
             }
           numberOfGuesses--;
@@ -110,7 +110,7 @@ var gameStart = function() {
     if (spaceHolder.toString() === lettersInWord.toString()) 
       {
         console.log(spaceHolder.toString(), lettersInWord.toString()) 
-        console.log("You win! PLease play again!");
+        console.log("You win! Let's play again!");
         gameStart();
   
     } else if (numberOfGuesses === 0) 
@@ -118,18 +118,18 @@ var gameStart = function() {
       // run inquirer to ask user if they want to start a new game after guesses run out
       inquirer.prompt([{
           type: 'input',
-          message: 'You are now all out of guesses. Would you like to play again?',
+          message: 'Sorry! Do you want to play again?',
           name: "confirm",
           default: true
       }, ])
       .then(function(res) {
   
           if (res.confirm) {
-              console.log("\nGreat, a new hangman game will begin!\n");
+              console.log("\nOkay, here we go!\n");
               // Restart the game
               gameStart();
           } else {
-              console.log("\nPlay again when you are ready!\n");
+              console.log("\nThanks for playing!\n");
           }
       });
     }
